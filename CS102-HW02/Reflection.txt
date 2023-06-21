@@ -1,0 +1,9 @@
+The card game was one of the most complicated codes I have implemented.
+
+First of all, I must say that the information given to us was insufficient. There has been written that "if game didn't accept the card c, give c back to the player!". However, in which cases the card should have to be returned to the player was not written. Also, the cards' suits have never been used in the whole game implementation. I thought the cards must be returned to the player if their suit does not match the suits of the card played by the previous player. However, in that case, it would take too much time for the game to end. Thus, I returned the card to the players if they attempted to play when it was not their turn.
+
+During the implementation, one of my biggest mistakes was considering the loops one-based instead of zero. For instance, I thought player 1 was at index 0 of the player's array. Therefore I should start my loop from i = one and use [i - 1] to access it. I reckoned it would enhance the readability of the code. But it was a big mistake, making it too complicated for me to figure it out in some cases. Because some arrays were zero-based, using one-base loops was causing null pointer exceptions. 
+
+Additionally, I implemented some other methods myself in the "CardGame.java" to mention why the "printWinners()" method prints the winners reversed because I've iterated through the array backward in "ScoreCard.java" in the method.
+
+Overall, it was a good and challenging assignment, and I am sure it helped me advance in the loops.
